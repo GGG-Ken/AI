@@ -12,3 +12,4 @@ Desktop.ini
 *.bak
 windows/codex/private-not-pushed/
 wsl/**/codex/private-not-pushed/
+*.zip

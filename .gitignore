@@ -1,0 +1,12 @@
+# Local/private Codex archives. These may contain credentials, full chat logs,
+# database state, browser cookies, runtime caches, or other sensitive data.
+codex/private-not-pushed/
+
+# Common OS/editor noise.
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local scratch files.
+*.tmp
+*.bak

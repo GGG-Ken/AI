@@ -1,0 +1,76 @@
+﻿model_provider = "custom"
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+disable_response_storage = true
+
+notify = "<local-path-redacted>"
+personality = "pragmatic"
+[model_providers.custom]
+name = "custom"
+wire_api = "responses"
+requires_openai_auth = true
+base_url = "<redacted>"
+
+[windows]
+sandbox = "elevated"
+
+# [projects.'D:\']  # redacted local project trust entry
+trust_level = "trusted"
+
+# [projects.'D:\mycode']  # redacted local project trust entry
+trust_level = "trusted"
+
+# [projects.'\\?\unc\127.0.0.1\wslshare\see0115_new']  # redacted local project trust entry
+trust_level = "trusted"
+
+# [projects.'c:\users\admin\documents\normal']  # redacted local project trust entry
+trust_level = "trusted"
+
+[mcp_servers.figma]
+bearer_token_env_var = "FIGMA_OAUTH_TOKEN"
+enabled = true
+url = "https://mcp.figma.com/mcp"
+
+[mcp_servers.figma.http_headers]
+X-Figma-Region = "us-east-1"
+
+[mcp_servers.node_repl]
+args = []
+command = "<local-path-redacted>"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "<local-path-redacted>"
+NODE_REPL_NODE_PATH = "<local-path-redacted>"
+NODE_REPL_TRUSTED_CODE_PATHS = "<local-path-redacted>"
+CODEX_HOME = "<local-path-redacted>"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "<redacted>"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.623.31921"
+SKY_CUA_NATIVE_PIPE = "1"
+SKY_CUA_NATIVE_PIPE_DIRECTORY = "<local-path-redacted>"
+CODEX_CLI_PATH = "<local-path-redacted>"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-06-27T03:05:10Z"
+source_type = "local"
+source = "<local-path-redacted>"
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[features]
+js_repl = false
+
+[desktop]
+conversationDetailMode = "STEPS_COMMANDS"
+sansFontSize = 14
+codeFontSize = 13
+ambient-suggestions-enabled = false
+followUpQueueMode = "queue"
+reviewDelivery = "inline"
+selected-avatar-id = "bsod"

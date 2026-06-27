@@ -10,3 +10,5 @@ Desktop.ini
 # Local scratch files.
 *.tmp
 *.bak
+windows/codex/private-not-pushed/
+wsl/**/codex/private-not-pushed/

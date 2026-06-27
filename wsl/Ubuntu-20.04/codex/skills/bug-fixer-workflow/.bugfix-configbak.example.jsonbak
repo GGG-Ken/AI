@@ -1,0 +1,12 @@
+{
+  "redmine": {
+    "baseUrl": "http://your-redmine-host",
+    "username": "your-username",
+    "password": "your-password"
+  },
+  "status": {
+    "inProgress": 17,
+    "resolved": 9,
+    "verificationPending": 10
+  }
+}

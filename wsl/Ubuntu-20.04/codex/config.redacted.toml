@@ -1,0 +1,139 @@
+﻿model_provider = "custom"
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+disable_response_storage = true
+personality = "pragmatic"
+
+#sandbox_mode = "workspace-write"
+sandbox_mode = "danger-full-access"
+approval_policy = "never"
+
+# Codex 通知 hook 必须放在顶层；放到 [tui] 下会变成 tui.notify，Codex 不会按任务事件调用。
+notify = "<local-path-redacted>"
+
+[features]
+rmcp_client = true
+#ghost_commit = true
+
+[model_providers.custom]
+name = "custom"
+wire_api = "responses"
+requires_openai_auth = true
+#base_url = "https://api.openai.com/v1"
+base_url = "<redacted>"
+
+[model_providers.zhipu]
+name = "Zhipu GLM"
+base_url = "<redacted>"
+
+[sandbox_workspace_write]
+network_access = true
+
+[projects."/home/quan/1share/see0115/sdk"]
+trust_level = "trusted"
+
+[projects."/home/quan"]
+trust_level = "trusted"
+
+[projects."/home/quan/1share/see0115/sdk/verify/sample_code/applications/pocket_ui_controll"]
+trust_level = "trusted"
+
+[projects."/home/quan/.codex/skills/bug-fixer-workflow"]
+trust_level = "trusted"
+
+[projects."/home/quan/1share/see0115/sdk/verify/sample_code/applications"]
+trust_level = "trusted"
+
+[projects."/home/quan/1share/see0115/kernel"]
+trust_level = "trusted"
+
+[projects."/home/quan/1share/see0115_new/sdk"]
+trust_level = "trusted"
+
+[projects."/home/quan/1share/see0115_new/sdk/verify/sample_code/applications/pocket_ui_controll"]
+trust_level = "trusted"
+
+[projects."/home/quan/1share/see0115"]
+trust_level = "trusted"
+
+[projects."/home/quan/1share/see0115_new"]
+trust_level = "trusted"
+
+[mcp_servers.figma]
+enabled = true
+url = "https://mcp.figma.com/mcp"
+
+[mcp_servers.figma.http_headers]
+X-Figma-Region = "us-east-1"
+
+[notify_policy]
+# Agent 执行约束：单次思考/处理超过该秒数必须主动调用 notify.py 发送飞书通知。
+long_running_seconds = 180
+# Agent 执行约束：每次请求权限、请求用户确认处理方式、或因阻塞需要用户输入前必须主动发送飞书通知。
+notify_on_permission_or_confirmation = true
+# Agent 执行约束：每次完成最终回答后依赖 Codex 顶层 notify hook；若 hook 不可用，需手动调用 notify.py。
+notify_on_final_response = true
+
+[tui]
+status_line = "<redacted>"
+status_line_use_colors = true
+session_picker_view = "dense"
+notifications = true
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
+[notice]
+fast_default_opt_out = true
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+
+[plugins."figma@openai-curated"]
+enabled = true
+
+[plugins."ponytail@ponytail"]
+enabled = true
+
+[marketplaces.ponytail]
+last_updated = "2026-06-26T02:14:11Z"
+last_revision = "c4d1925ae9b76a1b641877328209ad25cfeb5ef2"
+source_type = "git"
+source = "https://github.com/DietrichGebert/ponytail.git"
+
+[hooks.state]
+
+[hooks.state."ponytail@ponytail:hooks/claude-codex-hooks.json:session_start:0:0"]
+trusted_hash = "sha256:35ad4fd900da217d98e6eb60198465bd10d55e21eacd72758621dc385145cc05"
+enabled = true
+
+[hooks.state."ponytail@ponytail:hooks/claude-codex-hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:22db2f951755c593f9deba5e69cd1be1c87e0c9b2f5538a13b5dd9911141793f"
+enabled = true
+
+[hooks.state."ponytail@ponytail:hooks/claude-codex-hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:28c43eada804ad00a4e651d6af6320c01e763b1df060af0ab74865a55bc1c9a9"
+
+[mcp_servers.mpm]
+command = "<local-path-redacted>"
+
+[mcp_servers.mpm.tools.initialize_project]
+approval_mode = "approve"
+
+[mcp_servers.mpm.tools.memo]
+approval_mode = "approve"
+
+[mcp_servers.mpm.tools.known_facts]
+approval_mode = "approve"
+
+[mcp_servers.mpm.tools.code_search]
+approval_mode = "approve"
+
+[mcp_servers.mpm.tools.project_map]
+approval_mode = "approve"
+
+[mcp_servers.mpm.tools.flow_trace]
+approval_mode = "approve"
+
+[mcp_servers.mpm.tools.code_impact]
+approval_mode = "approve"

@@ -1,0 +1,21 @@
+{
+  "name": "bug-fixer-workflow-scripts",
+  "version": "1.0.0",
+  "description": "Cross-platform bug fix workflow scripts using Node.js (zero external dependencies)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "quick_start": "node scripts/quick_start.mjs",
+    "quick_complete": "node scripts/quick_complete.mjs",
+    "batch_fetch": "node scripts/batch_fetch.mjs",
+    "batch_commit": "node scripts/batch_commit.mjs",
+    "show_current": "node scripts/show_current.mjs",
+    "analyze_assets": "node scripts/analyze_assets.mjs",
+    "generate_summary": "node scripts/generate_summary.mjs",
+    "progress_save": "node scripts/progress_save.mjs",
+    "progress_restore": "node scripts/progress_restore.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

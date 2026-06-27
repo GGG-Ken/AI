@@ -1,0 +1,7 @@
+interface:
+  display_name: "Embedded Bug Fixer"
+  short_description: "Fix embedded bugs with no-hardware validation discipline"
+  default_prompt: "Use $embedded-bug-fixer-workflow to analyze and fix this embedded bug, documenting the hardware verification boundary."
+
+policy:
+  allow_implicit_invocation: true
